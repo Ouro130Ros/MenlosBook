@@ -43,6 +43,20 @@
 						},
 						"MoveSpeed":1
 					}
+				},
+				{
+					"Name":"Rat",
+					"Type":"Rat",
+					"TileID":"Rat",
+					"TileSet":"DungeonCrawlTileset",
+					"Parameters": {
+						"Stats":{
+							"HP":20,
+							"STR":10,
+							"EnergyCap":30
+						},
+						"MoveSpeed":3
+					}
 				}
 			],
 			"RoomDensity": 5000,

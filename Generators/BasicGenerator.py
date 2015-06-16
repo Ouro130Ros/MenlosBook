@@ -13,10 +13,12 @@ class BasicGenerator:
 		self.Wall = -1
 		self.Ground = -1
 		self.Player = -1
+		self.Rat = -1
 		for entity in config["Entities"]:
 			if entity["Name"] == "Ground": self.Ground = config["Entities"].index(entity)
 			if entity["Name"] == "Wall": self.Wall = config["Entities"].index(entity)
 			if entity["Name"] == "Player": self.Player = config["Entities"].index(entity)
+			if entity["Name"] == "Rat": self.Rat = config["Entities"].index(entity)
 		self.RoomDensity = config["RoomDensity"]
 		self.MinRoomWidth = config["MinRoomWidth"]
 		self.MaxRoomWidth = config["MaxRoomWidth"]
@@ -31,6 +33,8 @@ class BasicGenerator:
 		self._TrimEnds()
 		self._BuildWalls()
 		self._PlacePlayer()
+		self._PlaceRat()
+		self.Map.Print()
 		return self.Map.Map
 
 	def _PlacePlayer(self):
@@ -39,8 +43,19 @@ class BasicGenerator:
 			x = random.randint(1, self.XSize-1)
 			y = random.randint(1, self.YSize-1)
 			if self.Map.GetValue(x,y,0) == self.Ground:
+				print "Player Placed " + str((x,y,self.Player)) 
 				NotPlaced = False
 				self.Map.SetValue(x,y,1,self.Player)
+
+	def _PlaceRat(self):
+		NotPlaced = True
+		while NotPlaced:
+			x = random.randint(1, self.XSize-1)
+			y = random.randint(1, self.YSize-1)
+			if self.Map.GetValue(x,y,0) == self.Ground and self.Map.GetValue(x,y,1) == -1:
+				NotPlaced = False
+				print "Rat Placed"
+				self.Map.SetValue(x,y,1,self.Rat)
 
 	def _BuildWalls(self):
 		for x in range(0, self.XSize):

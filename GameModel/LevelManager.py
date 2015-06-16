@@ -38,9 +38,11 @@ class LevelManager:
 				for z in range(0, ZSize):
 					if levelConfig.IsEntityAt(x,y,z):
 						CurrentEntity = Factory.GetEntity(levelConfig.GetEntityAt(x,y,z),z)
+						if z == 1: print CurrentEntity
 						self._Locations[x][y].Entities.append(CurrentEntity)
 						if isinstance(CurrentEntity, Actor): self._Actors.append(CurrentEntity)
 						if isinstance(CurrentEntity, Player): self.Player = CurrentEntity
+		print len(self._Actors)
 					
 	def GetViewStateLevelParams(self):
 		Parameters = ViewModel.InitializationParameters(self.CurrentLevelConfig.MapSize, self.Player.GetLocation(self._Locations).Location)
