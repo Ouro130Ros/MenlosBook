@@ -1,9 +1,9 @@
 class InitializationParameters:
-	def __init__(self, mapSize, offset):
+	def __init__(self, mapSize, center):
 		self.RequiredTilesets = []
 		self.MapSize = mapSize # (X, Y)
 		self.ViewEntities = []
-		self.StartingOffset = offset
+		self.WorldCenter = center
 
 	def AddTileset(self, tileSet):
 		if not tileSet in self.RequiredTilesets: self.RequiredTilesets.append(tileSet)

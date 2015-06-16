@@ -18,7 +18,7 @@ class ViewController(Controller):
 	def InitializeWindow(self, size):
 		self.Window = pygame.display.set_mode(size)
 		self.WorldSize = size
-		pygame.display.set_caption("The House on Warsaw Lane")
+		pygame.display.set_caption(Constants.TITLEBAR)
 		self.Window.fill((0, 0, 0))
 		pygame.display.update()
 		
@@ -57,7 +57,7 @@ class ViewController(Controller):
 				if not tileSet in self.TileSets.keys():
 					self.TileSets[tileSet] = TileLoader.LoadTileSet(tileSet)
 
-			self.ViewState = ViewModel.ViewState(event.Parameters.MapSize, event.Parameters.StartingOffset, self.WorldSize)
+			self.ViewState = ViewModel.ViewState(event.Parameters.MapSize, event.Parameters.WorldCenter, self.WorldSize)
 			for view in event.Parameters.ViewEntities:
 				self.ViewState.Entities = event.Parameters.ViewEntities
 			self.State = Constants.VIEWSTATE_READY

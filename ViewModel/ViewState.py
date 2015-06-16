@@ -3,14 +3,16 @@ from datetime import datetime
 import Constants
 
 class ViewState:
-	def __init__(self, mapSize, offset, screenSize):
+	def __init__(self, mapSize, worldCenter, screenSize):
 		self.MapSize = mapSize
 		self.ScreenSize = screenSize
 		self.UpdateAll = False
 		self.LastTimestamp = datetime.now()
 		self.DrawFrame = True
 		self.Entities = []
-		self.Offset = offset
+		self.Offset = [0,0]
+		self.CenterOnPoint(worldCenter)
+
 
 	def AddEntity(self, viewEntity):
 		self.Entities.append(viewEntity)
@@ -34,6 +36,10 @@ class ViewState:
 		ElapsedMS = (ElapsedTime.days * 24 * 60 * 60 + ElapsedTime.seconds) * 1000 + ElapsedTime.microseconds / 1000.0
 		if ElapsedMS > 42:
 			self.DrawFrame = True
+
+	def CenterOnPoint(self, point):
+		self.Offset = [0,0]
+		self.ShiftOffset(((point[0]*Constants.TILE_X) - (self.ScreenSize[0]/2) , (point[1]*Constants.TILE_Y) - (self.ScreenSize[0]/2)))
 
 	def IsReady(self):
 		for e in self.Entities: 

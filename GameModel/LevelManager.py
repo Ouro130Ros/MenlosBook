@@ -5,7 +5,7 @@ from Player import Player
 from Location import Location
 import ViewModel
 
-class GameStateManager:
+class LevelManager:
 	def __init__(self):
 		self._Locations = []
 		self._Actors = []
@@ -19,18 +19,20 @@ class GameStateManager:
 		XSize = levelConfig.MapSize[0]
 		YSize = levelConfig.MapSize[1]
 		ZSize = levelConfig.MapHeight 
+		
 		for x in range (0, XSize):
 			LocationRow = []
 			for y in range(0, YSize):
 				LocationRow.append(Location((x,y)))
 			self._Locations.append(LocationRow)
-		print "Building Locations"
+
 		for x in range (0, XSize):
 			for y in range(0, YSize):
 				if x > 0: self._Locations[x][y].Neighbors[Constants.DIRECTION_W] = self._Locations[x-1][y]
 				if x < (XSize - 1): self._Locations[x][y].Neighbors[Constants.DIRECTION_E] = self._Locations[x+1][y]
 				if y > 0: self._Locations[x][y].Neighbors[Constants.DIRECTION_N] = self._Locations[x][y-1]
 				if y < (YSize - 1): self._Locations[x][y].Neighbors[Constants.DIRECTION_S] = self._Locations[x][y+1]
+
 		for x in range (0, XSize):
 			for y in range(0, YSize):
 				for z in range(0, ZSize):
@@ -41,7 +43,7 @@ class GameStateManager:
 						if isinstance(CurrentEntity, Player): self.Player = CurrentEntity
 					
 	def GetViewStateLevelParams(self):
-		Parameters = ViewModel.InitializationParameters(self.CurrentLevelConfig.MapSize, [10,10])
+		Parameters = ViewModel.InitializationParameters(self.CurrentLevelConfig.MapSize, self.Player.GetLocation(self._Locations).Location)
 		for x in range(0, len(self._Locations)):
 			for y in range(0, len(self._Locations[x])):
 				for entity in self._Locations[x][y].Entities:

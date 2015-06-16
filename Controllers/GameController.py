@@ -2,7 +2,7 @@ import Constants
 from Controller import Controller
 import Assets
 import Events
-from GameModel import GameStateManager
+from GameModel import LevelManager
 
 class GameController(Controller):
     def __init__(self, mediator):
@@ -14,7 +14,7 @@ class GameController(Controller):
 
     def OnTick(self):
         if self.State == Constants.GAMESTATE_STARTUP: 
-          self.Level = GameStateManager()
+          self.Level = LevelManager()
           self.Mediator.Post(Events.InitializeViewRequest(self.Configuration.GetWindowSize()))
           self.State = Constants.GAMESTATE_WAITINGONVIEW
         if self.State == Constants.GAMESTATE_LOADING_LEVEL:
