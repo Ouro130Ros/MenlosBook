@@ -16,12 +16,14 @@ class MovementCommand(Command):
 			for entity in TargetLocation.Entities:
 				if isinstance(entity, GameModel.StaticEntity) and not entity.IsPassable: return False
 				if isinstance(entity, GameModel.Actor): return False
+				#TODO Add Checks for Static Entity Movement Costs
 			return True
 
 	def Execute(self):
 		CurrentLocation = self.Entity.GetLocation(self.Locations)
 
 		if self._CanMove(CurrentLocation):
+			self.Entity.CurrentEnergy -= 10
 			TargetLocation = CurrentLocation.Neighbors[self.Direction]
 			CurrentLocation.Entities.remove(self.Entity)
 			ExitCommands = CurrentLocation.OnExit(self.Entity)

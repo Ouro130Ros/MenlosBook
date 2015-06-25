@@ -58,15 +58,21 @@ class LevelManager:
 
 	def OnTick(self):
 		Actions = []
-		for actor in self._Actors:
-			NextAction = actor.GetNextAction(self._Actors, self._Locations)
-			if NextAction: Actions.append(NextAction)
-
 		ViewModels = []
-		while len(Actions) > 0:
-			NextAction = Actions.pop(0)
-			Response = NextAction.Execute()
-			if Response:
-				ViewModels += Response.ViewUpdates
-				Actions += Response.Commands
+		for actor in self._Actors:
+			actor.AddEnergy(1)
+
+		if not (self.Player.CanMove() and self.Player.InputCommand == None):
+			for actor in self._Actors:
+				if actor.CanMove():
+					NextAction = actor.GetNextAction(self._Actors, self._Locations)
+					if NextAction: Actions.append(NextAction)
+
+			
+			while len(Actions) > 0:
+				NextAction = Actions.pop(0)
+				Response = NextAction.Execute()
+				if Response:
+					ViewModels += Response.ViewUpdates
+					Actions += Response.Commands
 		return ViewModels

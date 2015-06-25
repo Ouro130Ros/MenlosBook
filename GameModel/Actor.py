@@ -15,7 +15,7 @@ class Actor(Entity):
 		self.CurrentEnergy += energy
 		if self.CurrentEnergy > self.EnergyCap: self.CurrentEnergy = self.EnergyCap
 
-	def CanMove():
+	def CanMove(self):
 		return self.CurrentEnergy == self.EnergyCap
 
 	def GetNextAction(self, actors, locations):

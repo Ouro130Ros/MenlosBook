@@ -39,7 +39,7 @@
 						"Stats":{
 							"HP":20,
 							"STR":10,
-							"EnergyCap":30
+							"EnergyCap":50
 						},
 						"MoveSpeed":1
 					}
@@ -53,7 +53,7 @@
 						"Stats":{
 							"HP":20,
 							"STR":10,
-							"EnergyCap":30
+							"EnergyCap":50
 						},
 						"MoveSpeed":3
 					}
