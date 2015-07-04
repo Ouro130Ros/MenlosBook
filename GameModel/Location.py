@@ -1,14 +1,14 @@
 class Location:
-	def __init__(self, locationXY):
-		self.Location = locationXY #(x, y)
-		self.Neighbors = [None, None, None, None]
-		self.Entities = [] #Entity()
-		
-	def OnEnter(self, entity):
-		pass
-	
-	def OnExit(self, entity):
-		pass
+    def __init__(self, location_xy):
+        self.Location = location_xy #(x, y)
+        self.Neighbors = [None, None, None, None]
+        self.Entities = [] #Entity()
+        
+    def on_enter(self, entity):
+        pass
+    
+    def on_exit(self, entity):
+        pass
 
-	def OnUpdate(self, CommandEvent):
-		pass
+    def on_update(self, command_event):
+        pass

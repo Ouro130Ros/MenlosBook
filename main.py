@@ -1,17 +1,16 @@
-import pygame
 import Events
 import Controllers
 
-def Main():
-	Mediator = Events.EventMediator()
+def main():
+    mediator = Events.EventMediator()
 
-	Console = Controllers.ConsoleController(Mediator)
-	Game = Controllers.GameController(Mediator)
-	Input = Controllers.InputController(Mediator)
-	PaceMaker = Controllers.PacemakerController(Mediator)
-	View = Controllers.ViewController(Mediator)
+    console = Controllers.ConsoleController(mediator)
+    game = Controllers.GameController(mediator)
+    input = Controllers.InputController(mediator)
+    paceMaker = Controllers.PacemakerController(mediator)
+    view = Controllers.ViewController(mediator)
 
-	PaceMaker.Run()	
+    paceMaker.Run()
 
 if __name__ == '__main__':
-	Main()
+    main()

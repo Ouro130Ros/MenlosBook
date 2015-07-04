@@ -1,2 +1,2 @@
 class UserInput(object):
-	pass
+    pass

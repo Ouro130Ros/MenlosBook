@@ -1,6 +1,6 @@
 from BasicGenerator import BasicGenerator
 
 class GeneratorFactory:
-	def GetGenerator(self, generatorName, levelConfig):
-		if generatorName == "Basic":
-			return BasicGenerator(levelConfig)
+    def get_generator(self, generator_name, level_config):
+        if generator_name == "Basic":
+            return BasicGenerator(level_config)

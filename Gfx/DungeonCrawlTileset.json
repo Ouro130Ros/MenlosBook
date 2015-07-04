@@ -1,6 +1,6 @@
 {
-	"Floor": {"Type":"Static", "X":480, "Y":416, "W":32, "H":32},
-	"Wall": {"Type":"Static", "X":1280, "Y":576, "W":32, "H":32},
-	"Player": {"Type":"Static","X":128,"Y":64,"W":32,"H":32},
-	"Rat": {"Type":"Static", "X":0, "Y":96, "W":32, "H":32}
+    "Floor": {"Type":"Static", "X":480, "Y":416, "W":32, "H":32},
+    "Wall": {"Type":"Static", "X":1280, "Y":576, "W":32, "H":32},
+    "Player": {"Type":"Static","X":128,"Y":64,"W":32,"H":32},
+    "Rat": {"Type":"Static", "X":0, "Y":96, "W":32, "H":32}
 }

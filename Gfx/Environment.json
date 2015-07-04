@@ -1,6 +1,6 @@
 {
-	"StoneFloor_1": {"Type": "Static", "X":0, "Y":0, "W":32, "H":32},
-	"Player_Idle": {"Type": "Animated",
-					"Frames":[{"X":33, "Y":0, "W":32, "H":32,"D":4},
-							  {"X":33, "Y":33, "W":32, "H":32,"D":20}]}
+    "StoneFloor_1": {"Type": "Static", "X":0, "Y":0, "W":32, "H":32},
+    "Player_Idle": {"Type": "Animated",
+                    "Frames":[{"X":33, "Y":0, "W":32, "H":32,"D":4},
+                              {"X":33, "Y":33, "W":32, "H":32,"D":20}]}
 }

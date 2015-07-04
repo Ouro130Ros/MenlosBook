@@ -4,12 +4,12 @@ from Player import Player
 from Rat import Rat
 
 class EntityFactory:
-	def GetEntity(self, entityConfig, layer):
-		if entityConfig.EntityType == "Static":
-			return StaticEntity(layer, entityConfig.TileSet, entityConfig.TileID, entityConfig.Parameters)
-		if entityConfig.EntityType == "Player":
-			return Player(layer, entityConfig.TileSet, entityConfig.TileID, entityConfig.Parameters)
-		if entityConfig.EntityType == "Rat":
-			return Rat(layer, entityConfig.TileSet, entityConfig.TileID, entityConfig.Parameters)
-		else:
-			return Entity(layer, entityConfig.TileSet, entityConfig.TileID)
+    def GetEntity(self, entity_config, layer):
+        if entity_config.EntityType == "Static":
+            return StaticEntity(layer, entity_config.TileSet, entity_config.TileID, entity_config.Parameters)
+        if entity_config.EntityType == "Player":
+            return Player(layer, entity_config.TileSet, entity_config.TileID, entity_config.Parameters)
+        if entity_config.EntityType == "Rat":
+            return Rat(layer, entity_config.TileSet, entity_config.TileID, entity_config.Parameters)
+        else:
+            return Entity(layer, entity_config.TileSet, entity_config.TileID)

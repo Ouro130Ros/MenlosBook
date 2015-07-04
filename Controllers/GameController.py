@@ -18,8 +18,8 @@ class GameController(Controller):
           self.Mediator.Post(Events.InitializeViewRequest(self.Configuration.GetWindowSize()))
           self.State = Constants.GAMESTATE_WAITINGONVIEW
         if self.State == Constants.GAMESTATE_LOADING_LEVEL:
-          self.Level.LoadLevel(self.Configuration.GetLevel(self.Level.CurrentLevel))
-          self.Mediator.Post(Events.LoadLevelRequest(self.Level.GetViewStateLevelParams()))
+          self.Level.load_level(self.Configuration.GetLevel(self.Level.CurrentLevel))
+          self.Mediator.Post(Events.LoadLevelRequest(self.Level.GetViewStateLevelParam()))
           self.State = Constants.GAMESTATE_WAITINGONVIEW
         if self.State == Constants.GAMESTATE_RUNNING:
           Updates = self.Level.OnTick()

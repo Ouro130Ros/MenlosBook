@@ -1,137 +1,137 @@
 {
-	"GameScreen": {"X": 1000, "Y": 800},
-	"LevelProgression":[
-		"BasicGenTest"
-	],
-	"LevelConfigs":{
-		"BasicGenTest":{
-			"MapType": "Generated",
-			"Method": "Basic",
-			"XSize": 60,
-			"YSize": 60,
-			"ZSize": 2,
-			"TileSets":["DungeonCrawlTileset"],
-			"Entities": [
-				{
-					"Name":"Ground", 
-					"Type":"Static", 
-					"TileID":"Floor", 
-					"TileSet":"DungeonCrawlTileset", 
-					"Parameters": {
-						"Passable": "T"
-					}
-				},
-				{
-					"Name":"Wall",  
-					"Type":"Static", 
-					"TileID":"Wall",  
-					"TileSet":"DungeonCrawlTileset",
-					"Parameters":{
-						"Passable": "F"
-					}
-				},
-				{
-					"Name":"Player",
-					"Type":"Player",
-					"TileID":"Player",
-					"TileSet":"DungeonCrawlTileset",
-					"Parameters": {
-						"Stats":{
-							"HP":20,
-							"STR":10,
-							"EnergyCap":50
-						},
-						"MoveSpeed":1
-					}
-				},
-				{
-					"Name":"Rat",
-					"Type":"Rat",
-					"TileID":"Rat",
-					"TileSet":"DungeonCrawlTileset",
-					"Parameters": {
-						"Stats":{
-							"HP":20,
-							"STR":10,
-							"EnergyCap":50
-						},
-						"MoveSpeed":3
-					}
-				}
-			],
-			"RoomDensity": 5000,
-			"MinRoomWidth":3,
-			"MaxRoomWidth":8,
-			"MinRoomHeight":3,
-			"MaxRoomHeight":8
-		},
-		"MapTest": {
-			"MapType": "Fixed",
-			"XSize": 11,
-			"YSize": 10,
-			"ZSize": 2,
-			"TileSets":["DungeonCrawlTileset"],
-			"Entities": [
-				{
-					"Name":"Ground", 
-					"Type":"Static", 
-					"TileID":"Floor", 
-					"TileSet":"DungeonCrawlTileset", 
-					"Parameters": {
-						"Passable": "T"
-					}
-				},
-				{
-					"Name":"Wall",  
-					"Type":"Static", 
-					"TileID":"Wall",  
-					"TileSet":"DungeonCrawlTileset",
-					"Parameters":{
-						"Passable": "F"
-					}
-				},
-				{
-					"Name":"Player",
-					"Type":"Player",
-					"TileID":"Player",
-					"TileSet":"DungeonCrawlTileset",
-					"Parameters": {
-						"Stats":{
-							"HP":20,
-							"STR":10,
-							"EnergyCap":30
-						},
-						"MoveSpeed":3
-					}
-				}
-			],
-			"Map":[
-				[
-					[0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-					[0,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1],
-					[0,  1,  0,  0,  0,  0,  0,  0,  1,  0,  1],
-					[0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  1],
-					[0,  0,  0,  0,  1,  0,  -1, 0,  1,  0,  1],
-					[0,  0,  0,  0,  1,  0,  0,  0,  1,  0,  1],
-					[0,  0,  0,  0,  1,  0,  0,  0,  1,  0,  1],
-					[0,  0,  0,  0,  1,  1,  1,  1,  1,  0,  1],
-					[0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
-					[0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1]
-				],
-				[
-					[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-					[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-					[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-					[-1, -1,  2, -1, -1, -1, -1, -1, -1, -1, -1],
-					[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-					[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-					[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-					[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-					[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-					[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
-				]
-			]
-		}
-	}
+    "GameScreen": {"X": 1000, "Y": 800},
+    "LevelProgression":[
+        "BasicGenTest"
+    ],
+    "LevelConfigs":{
+        "BasicGenTest":{
+            "MapType": "Generated",
+            "Method": "Basic",
+            "XSize": 60,
+            "YSize": 60,
+            "ZSize": 2,
+            "TileSets":["DungeonCrawlTileset"],
+            "Entities": [
+                {
+                    "Name":"Ground",
+                    "Type":"Static",
+                    "TileID":"Floor",
+                    "TileSet":"DungeonCrawlTileset",
+                    "Parameters": {
+                        "Passable": "T"
+                    }
+                },
+                {
+                    "Name":"Wall",
+                    "Type":"Static",
+                    "TileID":"Wall",
+                    "TileSet":"DungeonCrawlTileset",
+                    "Parameters":{
+                        "Passable": "F"
+                    }
+                },
+                {
+                    "Name":"Player",
+                    "Type":"Player",
+                    "TileID":"Player",
+                    "TileSet":"DungeonCrawlTileset",
+                    "Parameters": {
+                        "Stats":{
+                            "HP":20,
+                            "STR":10,
+                            "EnergyCap":50
+                        },
+                        "MoveSpeed":1
+                    }
+                },
+                {
+                    "Name":"Rat",
+                    "Type":"Rat",
+                    "TileID":"Rat",
+                    "TileSet":"DungeonCrawlTileset",
+                    "Parameters": {
+                        "Stats":{
+                            "HP":20,
+                            "STR":10,
+                            "EnergyCap":50
+                        },
+                        "MoveSpeed":3
+                    }
+                }
+            ],
+            "RoomDensity": 5000,
+            "MinRoomWidth":3,
+            "MaxRoomWidth":8,
+            "MinRoomHeight":3,
+            "MaxRoomHeight":8
+        },
+        "MapTest": {
+            "MapType": "Fixed",
+            "XSize": 11,
+            "YSize": 10,
+            "ZSize": 2,
+            "TileSets":["DungeonCrawlTileset"],
+            "Entities": [
+                {
+                    "Name":"Ground",
+                    "Type":"Static",
+                    "TileID":"Floor",
+                    "TileSet":"DungeonCrawlTileset",
+                    "Parameters": {
+                        "Passable": "T"
+                    }
+                },
+                {
+                    "Name":"Wall",
+                    "Type":"Static",
+                    "TileID":"Wall",
+                    "TileSet":"DungeonCrawlTileset",
+                    "Parameters":{
+                        "Passable": "F"
+                    }
+                },
+                {
+                    "Name":"Player",
+                    "Type":"Player",
+                    "TileID":"Player",
+                    "TileSet":"DungeonCrawlTileset",
+                    "Parameters": {
+                        "Stats":{
+                            "HP":20,
+                            "STR":10,
+                            "EnergyCap":30
+                        },
+                        "MoveSpeed":3
+                    }
+                }
+            ],
+            "Map":[
+                [
+                    [0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+                    [0,  1,  1,  1,  1,  1,  1,  1,  1,  0,  1],
+                    [0,  1,  0,  0,  0,  0,  0,  0,  1,  0,  1],
+                    [0,  0,  0,  0,  0,  0,  0,  0,  1,  0,  1],
+                    [0,  0,  0,  0,  1,  0,  -1, 0,  1,  0,  1],
+                    [0,  0,  0,  0,  1,  0,  0,  0,  1,  0,  1],
+                    [0,  0,  0,  0,  1,  0,  0,  0,  1,  0,  1],
+                    [0,  0,  0,  0,  1,  1,  1,  1,  1,  0,  1],
+                    [0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1],
+                    [0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1]
+                ],
+                [
+                    [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+                    [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+                    [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+                    [-1, -1,  2, -1, -1, -1, -1, -1, -1, -1, -1],
+                    [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+                    [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+                    [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+                    [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+                    [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+                    [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+                ]
+            ]
+        }
+    }
 }
 
