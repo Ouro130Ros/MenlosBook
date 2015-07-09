@@ -1,4 +1,4 @@
 class CommandResponse:
-	def __init__(self):
-		self.Commands = []
-		self.ViewUpdates = []
+    def __init__(self):
+        self.Commands = []
+        self.ViewUpdates = []
